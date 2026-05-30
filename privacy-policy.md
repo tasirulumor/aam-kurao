@@ -7,7 +7,7 @@
 
 ## 1. Introduction
 
-Welcome to **আম কুড়াও (Aam Kurao)** ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data when you use our mango delivery Android application.
+Welcome to **আম কুড়াও (Aam Kurao)** ("we", "our", or "us"). We are committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, your rights regarding your data, and **how to delete your account and all associated data** when you use our mango delivery Android application.
 
 By using Aam Kurao, you agree to the collection and use of information as described in this policy.
 
@@ -102,7 +102,7 @@ We may share your information only in the following limited circumstances:
 - **Anonymous Sessions:** Anonymous session data is automatically cleaned up when you sign up (the anonymous UID is merged or discarded) or when you log out (a new anonymous session begins).
 - **Cart Data:** Local cart data on your device is cleared when you complete an order or uninstall the app.
 
-You may request deletion of your account and associated data at any time by contacting us (see Section 11).
+You may request deletion of your account and associated data at any time — see **Section 14** for full instructions.
 
 ---
 
@@ -118,7 +118,7 @@ We take reasonable measures to protect your personal information:
 
 - All data transmitted between the app and Firebase is encrypted using HTTPS/TLS.
 - Firebase Security Rules restrict database access to authenticated users only.
-- We use phone-number-based OTP (one-time password) authentication, eliminating the risk of weak passwords.
+- We use phone-number-based authentication, eliminating the risk of weak passwords.
 
 However, no method of transmission or storage is 100% secure. We cannot guarantee absolute security of your data.
 
@@ -130,7 +130,7 @@ Depending on applicable law (including the Digital Security Act and proposed Per
 
 - **Access** the personal data we hold about you.
 - **Correct** inaccurate or incomplete data.
-- **Delete** your account and associated personal data.
+- **Delete** your account and all associated personal data (see Section 14).
 - **Withdraw consent** for data processing (note: this may limit your ability to use the app).
 
 To exercise any of these rights, please contact us using the information in Section 11.
@@ -144,7 +144,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy, 
 **App Name:** আম কুড়াও (Aam Kurao)
 **Developer/Owner:** Tasirul Umor
 **Email:** umortasirul@gmail.com
-**Address:** Ahsanullah hall , BUET, Dhaka , Bangladesh
+**Address:** Ahsanullah hall, BUET, Dhaka, Bangladesh
 
 ---
 
@@ -157,6 +157,64 @@ We may update this Privacy Policy from time to time. When we do, we will update 
 ## 13. Governing Law
 
 This Privacy Policy is governed by and construed in accordance with the laws of the **People's Republic of Bangladesh**. Any disputes shall be subject to the exclusive jurisdiction of the courts of Bangladesh.
+
+---
+
+## 14. Account and Data Deletion
+
+**Google Play requires us to provide a way to delete your account and data.** You can do this in two ways:
+
+---
+
+### Method 1 — Delete Directly Inside the App (Recommended)
+
+This is the fastest method. It deletes all your data immediately and permanently.
+
+**Step-by-step:**
+1. Open **আম কুড়াও** and go to the **প্রোফাইল** (Profile) tab
+2. Scroll to the bottom of the screen
+3. Tap **"অ্যাকাউন্ট মুছুন"** (Delete Account)
+4. A confirmation dialog will appear listing exactly what will be deleted
+5. Tap **"হ্যাঁ, মুছে দিন"** (Yes, Delete)
+6. If Firebase requires it (session is old), you will be asked to re-enter your password once
+7. Your account is deleted and you are returned to the login screen
+
+**This action permanently deletes:**
+
+| Data | Location | Deleted? |
+|---|---|---|
+| Your name and phone number | Firebase Firestore `/users/{uid}` | ✅ Yes |
+| Phone number → account mapping | Firebase Firestore `/phone_lookup/{phone}` | ✅ Yes |
+| All your orders and order history | Firebase Firestore `/orders` | ✅ Yes |
+| Your login credentials | Firebase Authentication | ✅ Yes |
+| Cart data on this device | Android SharedPreferences | ✅ Yes |
+
+**This action does NOT delete:**
+- Orders that have already been physically delivered and are part of our business accounting records. These may be retained for the legally mandated period under Bangladesh tax and commerce law, but your personal identifiers (name, phone number) are removed from them.
+
+---
+
+### Method 2 — Request Deletion via Email
+
+If you have already uninstalled the app or cannot log in, send a deletion request by email.
+
+**Send an email to:** umortasirul@gmail.com
+
+**Subject line:** `Account Deletion Request — আম কুড়াও`
+
+**Include in the email:**
+- The phone number you used to register (e.g., 01XXXXXXXXX)
+- A brief statement that you want your account and all associated data permanently deleted
+
+**Timeline:** We will process your request and confirm deletion within **7 business days**.
+
+---
+
+### Important Notes on Deletion
+
+- **Deletion is permanent and irreversible.** Once deleted, your account, order history, and personal data cannot be recovered.
+- **Active orders:** If you have an order currently being processed or out for delivery, we recommend waiting for it to complete before deleting your account.
+- **Anonymous users:** If you used the app without creating an account (guest/anonymous mode), no account data is stored under your name. Your anonymous session and local cart are automatically cleared when you uninstall the app.
 
 ---
 
